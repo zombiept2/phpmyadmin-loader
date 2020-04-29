@@ -126,11 +126,11 @@ class Setup
 		{
 			if ($dev)
 			{
-				$error .= Setup::getFile('https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-all-languages.zip','pma.zip');
+				$error .= Setup::getFile('https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.zip','pma.zip');
 			}
 			else
 			{
-				$error .= Setup::getFile('https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-all-languages.zip','pma.zip');
+				$error .= Setup::getFile('https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.zip','pma.zip');
 			}
 		}
 
@@ -142,8 +142,8 @@ class Setup
 			// Extract it
 			$zip->extractTo(dirname(__FILE__));
 			$zip->close();
-            Setup::recursiveCopy(dirname(__FILE__) . '/phpMyAdmin-4.8.5-all-languages', dirname(__FILE__));
-            Setup::recursiveRemoveDirectory(dirname(__FILE__) . '/phpMyAdmin-4.8.5-all-languages');
+            Setup::recursiveCopy(dirname(__FILE__) . '/phpMyAdmin-5.0.2-all-languages', dirname(__FILE__));
+            Setup::recursiveRemoveDirectory(dirname(__FILE__) . '/phpMyAdmin-5.0.2-all-languages');
 		} 
 		else 
 		{
